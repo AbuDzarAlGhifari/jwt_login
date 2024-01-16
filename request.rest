@@ -1,0 +1,28 @@
+GET http://localhost:7000/auth/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEwLCJuYW1lIjoibmV3IiwiZW1haWwiOiJuZXdAZ21haWwuY29tIiwiaWF0IjoxNzA1MzcwNjAxLCJleHAiOjE3MDUzNzA2MTZ9.jcBYTt0euSqFDpAl5ddPusWOjOOtH4OlzUoKqQZiWYM
+
+###
+POST http://localhost:7000/auth/users
+Content-Type: application/json
+
+{
+    "name": "new",
+    "email": "new@gmail.com",
+    "password": "telkom",
+    "confPassword": "telkom"
+}
+
+###
+POST http://localhost:7000/auth/login
+Content-Type: application/json
+
+{
+    "email": "new@gmail.com",
+    "password": "telkom"
+}
+
+###
+GET http://localhost:7000/auth/token
+
+###
+DELETE  http://localhost:5000/logout
